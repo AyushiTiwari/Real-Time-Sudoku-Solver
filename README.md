@@ -28,7 +28,7 @@ This includes a recursive function call.
 #### Digital Image: 
 A digital image is a numeric representation, normally binary, of a two-dimensional image. Depending on whether the image resolution is fixed, it may be of vector or raster type. By itself, the term "digital image" usually refers to raster images or bitmapped images (as opposed to vector images).
 
-Types of digital image
+ Real-Time-Sudoku-Solver/webcam.png Types of digital image
 - Binary Image
 - Grayscale Image
 - RGB Image
@@ -56,15 +56,14 @@ We have used OCR for image recognition through pytesseract interface.
 
 #### Importing Libraries:
 To begin with the solver's code we will have to import the following inbuilt libraries in python.
-Note: just pip install them in case if terminal threows error.
-
-![]( Real-Time-Sudoku-Solver/import.png "To include libraries")
+Note: just pip install them in case if terminal threows error
+ ![alt import]( "To include libraries")
 
 #### Acquiring image:
 To acquire the image we used video form in Opencv and **'cv2.VideoCapture("time in milliseconds")'** is the command that we used for the same.
 For grid detection we have used contours. The four corners of the grid are evaluated and the sudoku grid is then reoriented with the help of following command line.
 
-![]( "To get the image of grid")
+![alt webcam](http://Real-Time-Sudoku-Solver/webcam.png "To get the image of grid")
 
 '######
 
