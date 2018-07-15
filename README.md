@@ -54,6 +54,9 @@ We have used OCR for image recognition through pytesseract interface.
 
 ##  SOLVER (THE CODE)
 
+#### Importing Libraries
+![alt import](/import.png "To include libraries")
+
 #### Acquiring image:
 ######
 
