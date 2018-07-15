@@ -46,7 +46,6 @@ Contours can be explained simply as a curve joining all the continuous points (a
 - findContours function modifies the source image. So if you want source image even after finding contours, already store it to some other variables.
  - In OpenCV, finding contours is like finding white object from black background. So remember, object to be found should be white and background should be black.
  
- 
 ### Optical character recognition:
 Optical character recognition (also optical character reader, OCR) is the mechanical or electronic conversion of images of typed, handwritten or printed text into machine-encoded text, whether from a scanned document, a photo of a document, a scene-photo (for example the text on signs and billboards in a landscape photo) or from subtitle text superimposed on an image (for example from a television broadcast)
 
@@ -54,20 +53,50 @@ We have used OCR for image recognition through pytesseract interface.
 
 ##  SOLVER (THE CODE)
 
-#### Importing Libraries:
+#### 1.Importing Libraries:
 To begin with the solver's code we will have to import the following inbuilt libraries in python.
-Note: just pip install them in case if terminal threows error
- ![alt import](https://github.com/AyushiTiwari/Real-Time-Sudoku-Solver/blob/master/import.png "To include libraries")
+Note: just pip install them in case if terminal throws error
+![alt import](https://github.com/AyushiTiwari/Real-Time-Sudoku-Solver/blob/master/import.png "To include libraries")
 
-#### Acquiring image:
+#### 2.Acquiring image:
 To acquire the image we used video form in Opencv and 'cv2.VideoCapture(time_in_milliseconds)' is the command that we used for the same.
 For grid detection we have used contours. The four corners of the grid are evaluated and the sudoku grid is then reoriented with the help of following command line.
-
 ![alt webcam](https://github.com/AyushiTiwari/Real-Time-Sudoku-Solver/blob/master/webcam.png "To get image of grid")
 
-'######
+#### 3.Getting clear digits and removing noise:
+We have used contours to get image of cells of grid that conatin digits. also the digits are made more clear and sharp by eroding. noise is also reduced bt filling the digits ie. by 'cv2.threshold()'.
+![alt contours](https://github.com/AyushiTiwari/Real-Time-Sudoku-Solver/blob/master/contours.png "to reduce noise")
+
+#### 4.Recognising the value of digits by sending it to OCR:
+Pytesseract is used for optocal character recognition here and then it is further processed. The pytesseract convers the value of recognised digit to a string that can we used for further operations. The output of pytesseract is quite accurate. the code that we used is:
+![alt pytesseract](https://github.com/AyushiTiwari/Real-Time-Sudoku-Solver/blob/master/ocr.png "for digit recognition")
+
+#### 5.SOLVER CODE AND MECHANISM:
+###### (a). Checking usasigned cells and digits thwt are sent by the main solver function.
+The following program was used to chek the empty cells and weather a particular digit was present in the row/column/3x3 grid. It was basic 2-Dimensional array analysis.
+![alt check](https://github.com/AyushiTiwari/Real-Time-Sudoku-Solver/blob/master/check.png "checking grid)
+
+###### (b). Backtracking function:
+The solver uses recursive function call to check digits values. It also then changes the digits in case if the digit is already present in the grid.
+![alt backtrack](https://github.com/AyushiTiwari/Real-Time-Sudoku-Solver/blob/master/solver.png "slover")
+
+#### 6. Displaying Output:
+The program then comiles the array and displays the output on the screen along with existing image of the sudoku grid. It also displays the solved grid on the screen.
+![alt output](https://github.com/AyushiTiwari/Real-Time-Sudoku-Solver/blob/master/print_output.png "output")
 
 ## REFERENCES
 - Python [python.org](https://www.python.org/doc/)
 - OpenCV tutorials [opencv tutorials](opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py.../py_intro.html)
 - Stackerflow [for doubts](https://stackoverflow.com/)
+
+### OUR MENTORS:-
+- Aman Jain
+- Akshay Kulkarni
+- Navid Panchi
+- Amit Balgi
+
+### OUR TEAM :-
+- Siddharth Gupta
+- Abhijit Adsul
+- Nikhil Dhoot
+- Ayushi Tiwari
