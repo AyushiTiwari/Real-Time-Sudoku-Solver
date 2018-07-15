@@ -54,11 +54,19 @@ We have used OCR for image recognition through pytesseract interface.
 
 ##  SOLVER (THE CODE)
 
-#### Importing Libraries
-![alt import](/import.png "To include libraries")
+#### Importing Libraries:
+To begin with the solver's code we will have to import the following inbuilt libraries in python.
+Note: just pip install them in case if terminal threows error.
+
+![]( Real-Time-Sudoku-Solver/import.png "To include libraries")
 
 #### Acquiring image:
-######
+To acquire the image we used video form in Opencv and **'cv2.VideoCapture("time in milliseconds")'** is the command that we used for the same.
+For grid detection we have used contours. The four corners of the grid are evaluated and the sudoku grid is then reoriented with the help of following command line.
+
+![]( "To get the image of grid")
+
+'######
 
 ## REFERENCES
 - Python [python.org](https://www.python.org/doc/)
