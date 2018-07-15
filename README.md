@@ -60,10 +60,10 @@ Note: just pip install them in case if terminal threows error
  ![alt import](https://github.com/AyushiTiwari/Real-Time-Sudoku-Solver/blob/master/import.png "To include libraries")
 
 #### Acquiring image:
-To acquire the image we used video form in Opencv and **'cv2.VideoCapture("time in milliseconds")'** is the command that we used for the same.
+To acquire the image we used video form in Opencv and 'cv2.VideoCapture(time_in_milliseconds)' is the command that we used for the same.
 For grid detection we have used contours. The four corners of the grid are evaluated and the sudoku grid is then reoriented with the help of following command line.
 
-![alt webcam](http://Real-Time-Sudoku-Solver/webcam.png "To get the image of grid")
+![alt webcam](https://github.com/AyushiTiwari/Real-Time-Sudoku-Solver/blob/master/webcam.png "To get image of grid")
 
 '######
 
