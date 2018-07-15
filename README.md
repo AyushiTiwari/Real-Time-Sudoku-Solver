@@ -57,7 +57,7 @@ We have used OCR for image recognition through pytesseract interface.
 #### Importing Libraries:
 To begin with the solver's code we will have to import the following inbuilt libraries in python.
 Note: just pip install them in case if terminal threows error
- ![alt import]( "To include libraries")
+ ![alt import](https://github.com/AyushiTiwari/Real-Time-Sudoku-Solver/blob/master/import.png "To include libraries")
 
 #### Acquiring image:
 To acquire the image we used video form in Opencv and **'cv2.VideoCapture("time in milliseconds")'** is the command that we used for the same.
