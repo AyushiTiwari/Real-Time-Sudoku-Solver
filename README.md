@@ -74,7 +74,7 @@ Pytesseract is used for optocal character recognition here and then it is furthe
 #### 5.SOLVER CODE AND MECHANISM:
 ###### (a). Checking usasigned cells and digits thwt are sent by the main solver function.
 The following program was used to chek the empty cells and weather a particular digit was present in the row/column/3x3 grid. It was basic 2-Dimensional array analysis.
-![alt checkgrid](https://github.com/AyushiTiwari/Real-Time-Sudoku-Solver/bolb/master/check.png "check grid")
+![alt check](https://github.com/AyushiTiwari/Real-Time-Sudoku-Solver/blob/master/check.png "check")
 
 ###### (b). Backtracking function:
 The solver uses recursive function call to check digits values. It also then changes the digits in case if the digit is already present in the grid.
